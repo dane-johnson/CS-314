@@ -1,0 +1,9 @@
+1) 32 semaphores are available
+2) 64 locks are available
+3) Interrupts are disabled, and then SemCreate looks through the array of semaphores for an unused semaphore, returning invalid if there isn't one. It then calls semInit, which initializes the semaphore queue, and the count of the semaphore. SemCreate then returns the pointer to the semaphore.
+4)SemWait: Disables interrupts, then decrements sem->count. If count is now below 0, then it allocates a link to the current PCB, then adds that link to the end of the queue. Then the process goes to sleep, and interrupts are restored.
+SemSignal: Disables interrupts, then increments the count. If the count is less than or equal to 0, it sets the link l to the first in the waiting queue, then removes that from the queue. Then, that process wakes up, and the link is freed. Then interrupts are restored.
+5)
+We don't want the user to be able to access the implementation of the semaphore, so we resolve this issue by using a handle. A handle is an index from the beginning of the pool in memory where semaphores are implemented. We pass the user the location of the handle instead of the actual memory address of the semaphore, so they can't eff it up.
+
+To implement locks, we first followed the trap from usertraps.s back to traps.h and discovered the system call was being made to create a handle and return it to the user. We then edited synch.h with our definition of a lock should be, namely a PID for the owning process and a queue of waiting processes. We then implemented the calls to make a handle in synch.c by having it check for a valid handle, then computing the actual location in memory of the kernel. From there, we implemented the lock by having it lock to a single process and have all other processes wait in the queue until it was empty and they could execute.
