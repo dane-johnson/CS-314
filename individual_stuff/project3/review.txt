@@ -1,0 +1,5 @@
+This time around, both Bryson and myself were under a deal of curricular pressures at the time of this assignment, and therefore it fell to the wayside until some free time was too be had by both of us. I jumped the gun a bit and analysed the design document and began coding a bit early, but I met with Bryson soon after to discuss the wall of bugs I had brought up in the early attempts to code the scheduler.
+
+The schduler worked, after a bit of debuggery, and I strongly beleive it matches specifictions. I was primarily responsible for its design and implementation.
+
+One thing I think could have improved the project would be the inclusion of some form of stepwise debugger. I realize this might not be possible at such a low level, but I think at scale it would save incalculable manhours.
