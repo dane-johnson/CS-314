@@ -1,0 +1,11 @@
+How I arrived at the solution:
+
+My arrival at this solution was largely guess and check. I started, as suggested, in usertraps.s. I noticed that all the calls, even those that were meant to return a value, had the same structure. For my trap, I merely emulated that structure, using the unused trap vector defined in traps.h. In traps.c, I played around until I was able to return a value. I eventually did, by emulating the structure of TRAP_READ, another call I know would return a value. From there, I went on to process.h and prototyped my ProcessGetPID function. By looking at the code process.h, I deduced that the currentPCB pointer minus the pointer to the free pcbs must be the PID I needed, given that pcbs is implemented as a stack, growing from the largest possible process value towards 0.
+
+Control flow:
+
+Once the user program calls GetPID(), control goes to the system call defined in usertraps.s, where the system call is run. In the system call, the interrupt is performed, and the flag from traps.h activates the switch to call ProcessGetPID, which is defined in process.c. Once the function returns, the call is made to ProcessSetValue to put the return value into the correct register. The interrupt then complete, control is returned to the user program, now with the pid stored into the specified variable.
+
+How I accounted for elapsed time in the kernal:
+
+Since the system clock is ticking the whole time the interrupt is being performed, I enabled interrupts in traps.c before I made my call to find the PID and set the return value. In this way, if my time slice were to expire, I could store away the user process and return to it later when need be.
