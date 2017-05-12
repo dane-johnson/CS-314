@@ -1,0 +1,8 @@
+DLXOS uses a round robin pre-emptive scheduler that is very simplistic in implemenatation. It simply creates a queue of runnable processes, and runs the one at the front of the queue. At the end of a quantum, the scheduler preempts the current process and moves it to the back of the queue. The scheduler then continues with the head until no processes remain, and exits the simulation.
+
+Preliminary Design:
+Our WinNT-style scheduler will differ from this in that it will be a priority-based scheduler. Instead of one reunqueue, it will have 32. Each process will have a base priority, a current priority, and a certain starting quantum. At each clock interrupt, the scheduler will deduct 3 from the quantum of the running process, and check if there is another process to run at a higher priority level, or the same priority level. If there is not, the process gets to run until its quantum is up, and then the scheduler looks for processes in a lower priority level. The process that finished its quantum is placed a the end of its priority queue. The scheduler also needs to check for starving processes, by determining if a process has been in the ready state (in a run queue) for more than 300 clock interrupts. This will be checked once per second (once every 100 quanta).
+
+Implementation:
+
+
