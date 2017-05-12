@@ -1,0 +1,3 @@
+Note that pt6.a1.c and pt6.a2.c must be compiled as a1 and a2 respectively for pt6.b to work properly. Simply running make will build the directory in the proper way for this exection to work properly.
+
+Additionally, to reliably generate major page faults, the program must be run on clean memory.

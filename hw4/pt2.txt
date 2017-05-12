@@ -1,0 +1,6 @@
+FIFO:
+  12 faults
+LRU:
+  12 faults
+MRU:
+  6 faults
