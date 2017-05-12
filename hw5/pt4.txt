@@ -1,0 +1,5 @@
+1 disk operation to bring root directory contents into memory.
+2 disk operations per directory, 1 to bring inode into memory, 1 to bring directory contents into memory.
+1 disk operation to bring myfile inode into memory.
+
+8 operations total.

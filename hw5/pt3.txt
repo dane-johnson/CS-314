@@ -1,0 +1,8 @@
+The i-node contains 100 direct entries.
+The single-indirect entry points to a 4Kb block. It can hold 1k 4b entries; 2^10 entries.
+The double-indirect entry points to a 4Kb block, each entry holding a single indirect entry; 2^20 entries.
+The triple-indirect entry points to a 4kb block, each entry holding a double indirect entry; 2^30 entries.
+
+100 + 2^10 + 2^20 + 2^30 = About 1.07 billion blocks.
+
+Each block holds 2^12 bytes, totalling around 2^42 bytes, or 4Tb.

@@ -1,0 +1,8 @@
+Seek time = 15ms.
+Average rotation latency = 0.06ms
+Average transfer time = 0.002ms
+Average read or write time = 15.062ms
+1Tb / 16Kb/file = 2^26 files
+2^26 files * 15ms / file / 3600000 ms/hr = 280 hrs
+280 hrs * 2 = 560 hrs to backup half the 2Tb drive.
+
