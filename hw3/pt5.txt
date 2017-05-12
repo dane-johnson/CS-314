@@ -1,0 +1,17 @@
+First Fit:
+ 1: 1st segment
+ 2: 3rd segment
+ 3: 6th segment
+Best Fit:
+ 1: 5th segment
+ 2: 1st segment
+ 3: 3rd segment
+Next Fit:
+ 1: 1st segment
+ 2: 3rd segment
+ 3: 6th segment
+Worst Fit:
+ 1: 6th segment
+ 2: 6th segment
+ 3: 7th segment
+ 

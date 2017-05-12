@@ -1,0 +1,10 @@
+4KB:
+ 4097   -> Page: 1   Offset 1
+ 8193   -> Page: 2   Offset 1
+ 55555  -> Page: 13  Offset 2037
+ 999999 -> Page: 144 Offset 575
+8KB:
+ 4097   -> Page: 0   Offset 4097
+ 8192   -> Page: 1   Offset 1
+ 55555  -> Page: 6   Offset 6403
+ 999999 -> Page: 122 Offset 575

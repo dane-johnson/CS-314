@@ -1,0 +1,8 @@
+The system is scheduleable.
+
+The voice call requires only 2 msec of cpu time per 10, or 1/5 of the cpu time.
+
+The video needs to run 40 frames per second, with each frame taking 15 msec to buffer.
+Knowing this, we know to buffer the video we need only 600 msec/sec, or 3/5 of the cpu time.
+
+Thus, we can schedule these two real-time systems with using only 4/5 of the cpu time.

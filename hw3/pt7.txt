@@ -1,0 +1,8 @@
+NRU:
+ Page 1
+FIFO:
+ Page 1
+LRU:
+ Page 3
+Second Chance:
+ Page 1
