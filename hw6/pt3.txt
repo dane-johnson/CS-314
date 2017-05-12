@@ -1,0 +1,1 @@
+Since the crystal is oscillating at 3000 Mhz, we know it is rising and falling once every 3.3*10^-8 seconds. In order to achieve a 1 ms resolution, therefore, the holding register must be set to 30,303. To acheive a resolution of 100 microseconds, the holding register must be set to 303,030.

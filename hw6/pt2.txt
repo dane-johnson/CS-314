@@ -1,0 +1,1 @@
+Each clock interrupt has a 2 microsecond trap time and a 9 microsecond trap time, meaning 11 microseconds of overhead per clock interrupt. Since the cpu is clocked at 500 interrupts per second, a quantum is 2 milliseconds. Therefore, the clock takes up 0.55 % of all cpu time.

@@ -1,0 +1,3 @@
+At 10ns access time, accounting for 2 accesses to read and write to each of 32 registers, that means 640ns per interrupt.
+
+This means the cpu can handle 1/640^(-9) interupts per second, or 1562500 interrupts per second.

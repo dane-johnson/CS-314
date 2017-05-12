@@ -1,0 +1,6 @@
+RAID 0: Read write speed is increased by n, there is n additional space, and no redundancy.
+RAID 1: Read speed is increased by n, n/2 addtional space, and all data is duplicated so as many as n/2 drives may fail, for maximum reliability.
+RAID 2: Read write speed is increased by n, n additional space, and there is no redundancy
+RAID 3: Read speed is increased by (n - 1), (n - 1) additional space, and pairity is stored on a redundant drive, so one drive may fail.
+RAID 4: Read speed is boosted by (n - 1), (n - 1) additonal space, and pairity is stored in a redundant drive, so one drive may fail.
+RAID 5: Read speed is boosted by (n - 1), (n - 1) additonaly space, and pairity is striped across the disks, and one may fail.
